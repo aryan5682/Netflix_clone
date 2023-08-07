@@ -10,7 +10,8 @@ import Player from './pages/Player';
 import Movies from './pages/Movies';
 import TvShow from './pages/TvShow';
 import UserLiked from './pages/UserLiked';
-
+export const baseUrl = 'https://netflix-clone-backend-vuur.onrender.com';
+// export const baseUrl = 'http://localhost:5000';
 
 
 export default function App() {

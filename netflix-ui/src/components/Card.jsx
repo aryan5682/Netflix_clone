@@ -12,6 +12,7 @@ import { firebaseAuth } from '../utils/firebase-config';
 import axios from "axios";
 import { useDispatch } from 'react-redux';
 import { removeFromLikedMovies } from '../../src/store/index';
+import { baseUrl } from '../App';
 export default React.memo( function Card({movieData,isLiked=false}) {
   const [isHovered,setIsHovered]=useState(false);
   const [email,setEmail]=useState(undefined);
@@ -23,7 +24,7 @@ export default React.memo( function Card({movieData,isLiked=false}) {
 });
 const addToList =async()=>{
     try{
-     await axios.post("http://localhost:5000/api/user/add",{email,data:movieData})
+     await axios.post(baseUrl + "/api/user/add",{email,data:movieData})
     }catch(err){
         console.log(err);
     }
