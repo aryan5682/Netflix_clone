@@ -7,7 +7,7 @@ dotenv.config();
 const app=express();
 app.use(cors());
 app.use(express.json());
-const MONGODB=process.env.MONGO;
+const MONGODB=process.env.Mongo;
 mongoose.connect(MONGODB,{
 useNewUrlParser:true,
 useUnifiedTopology:true,
