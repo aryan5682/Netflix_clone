@@ -11,9 +11,8 @@ const MONGODB=process.env.MONGO;
 mongoose.connect(MONGODB,{
 useNewUrlParser:true,
 useUnifiedTopology:true,
-
 }).then(()=>{
   console.log("DB Connected");
-});
+}).catch(err => {});
 app.use("/api/user",userRoutes)
 app.listen(5000,console.log("server started"));
