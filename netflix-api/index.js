@@ -13,6 +13,6 @@ useNewUrlParser:true,
 useUnifiedTopology:true,
 }).then(()=>{
   console.log("DB Connected");
-}).catch(err => {});
+}).catch(err => {console.log("error")});
 app.use("/api/user",userRoutes)
 app.listen(5000,console.log("server started"));
